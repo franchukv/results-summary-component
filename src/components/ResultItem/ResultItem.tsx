@@ -5,8 +5,8 @@ const ResultItem = ({ resultItem }: { resultItem: CategoryItem }) => {
   const categoryClasses = {
     reaction: 'text-red-400 bg-red-50',
     memory: 'text-yellow-400 bg-yellow-50',
-    verbal: 'text-green-400 bg-green-50',
-    visual: 'text-blue-400 bg-blue-50',
+    verbal: 'text-green-500 bg-green-50',
+    visual: 'text-blue-800 bg-blue-50',
   };
 
   return (
