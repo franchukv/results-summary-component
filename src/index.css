@@ -1,0 +1,70 @@
+@font-face {
+  font-family: 'HankenGrotesk';
+  src: url(../src/assets/fonts/HankenGrotesk-Medium.ttf) format('truetype');
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HankenGrotesk';
+  src: url(../src/assets/fonts/HankenGrotesk-Bold.ttf) format('truetype');
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HankenGrotesk';
+  src: url(../src/assets/fonts/HankenGrotesk-ExtraBold.ttf) format('truetype');
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+}
+
+@import 'tailwindcss';
+
+@theme {
+  --font-hankengrotesk: 'HankenGrotesk', sans-serif;
+  --color-yellow-50: #fffbf4;
+  --color-yellow-400: #ffb21e;
+  --color-red-50: #fff6f6;
+  --color-red-400: #f55;
+  --color-green-500: #00bb8f;
+  --color-green-50: #f2fcf9;
+  --color-blue-50: #f3f4fd;
+  --color-blue-800: #1125d6;
+  --color-navy-50: #ecf2ff;
+  --color-navy-200: #cac9ff;
+  --color-navy-950: #303b59;
+}
+
+@layer components {
+  body {
+    @apply min-h-dvh;
+  }
+
+  #root {
+    @apply w-full min-h-dvh flex flex-col items-center font-hankengrotesk font-medium leading-[130%] text-base bg-white text-navy-950 md:justify-center md:p-10 md:bg-blue-50 md:text-lg;
+  }
+
+  .button {
+    @apply p-4 font-bold text-lg text-white bg-navy-950 rounded-[128px] cursor-pointer;
+  }
+
+  .result-item--reaction {
+    @apply text-red-400 bg-red-50;
+  }
+
+  .result-item--memory {
+    @apply text-yellow-400 bg-yellow-50;
+  }
+
+  .result-item--verbal {
+    @apply text-green-400 bg-green-50;
+  }
+
+  .result-item--visual {
+    @apply text-blue-400 bg-blue-50;
+  }
+}
